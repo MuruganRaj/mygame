@@ -34,7 +34,7 @@ app.controller('customerCtrl',function($scope, $http, $location, $routeParams){
 
     $http({
           method:"GET",
-          url:" http://localhost:8080/products"
+          url:" http://68.183.80.171:8080/products"
       }).then(function successCallback(res){
           $scope.products = res.data;
       }, function failureCallback(res){
@@ -47,7 +47,7 @@ app.controller('customerCtrl',function($scope, $http, $location, $routeParams){
 
     $http({
           method:"GET",
-          url:" http://localhost:8080/customers"
+          url:"http://68.183.80.171:8080/customers"
       }).then(function successCallback(res){
           $scope.customers = res.data;
       }, function failureCallback(res){
@@ -60,7 +60,7 @@ app.controller('customerCtrl',function($scope, $http, $location, $routeParams){
 
     $http({
           method:"POST",
-          url:" http://localhost:8080/customers/add",
+          url:"http://68.183.80.171:8080/customers/add",
           data: JSON.stringify(student)
       }).then(function successCallback(res){
           if(res.data === 'success'){
@@ -76,7 +76,7 @@ app.controller('customerCtrl',function($scope, $http, $location, $routeParams){
 
     $http({
           method:"GET",
-          url:" http://localhost:8080/customers/edit/"+id,
+          url:"http://68.183.80.171:8080/customers/edit/"+id,
       }).then(function successCallback(res){
             $scope.customerToEdit =  res.data[0];
            console.log('get Customer Info', $scope.customerToEdit );
@@ -90,7 +90,7 @@ app.controller('customerCtrl',function($scope, $http, $location, $routeParams){
 
     $http({
           method:"POST",
-          url:" http://localhost:8080/customers/edit/"+customerToEdit.id,
+          url:"http://68.183.80.171:8080/customers/edit/"+customerToEdit.id,
           data: JSON.stringify(customerToEdit)
       }).then(function successCallback(res){
             $location.path("/");
@@ -104,7 +104,7 @@ app.controller('customerCtrl',function($scope, $http, $location, $routeParams){
 
     $http({
           method:"GET",
-          url:" http://localhost:8080/customers/delete/"+customerId
+          url:" http://68.183.80.171:8080/customers/delete/"+customerId
       }).then(function successCallback(res){
             $location.path("/");
       }, function failureCallback(res){

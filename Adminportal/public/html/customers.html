@@ -1,0 +1,30 @@
+
+        <div class="page-data">
+         <div class="data-btn">
+             <button><a href="#!add_customer"> Add </a></button>
+         </div>
+         <div class="data-table">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th width="120px">Action</th>
+                </tr>
+                <tr ng-repeat="customer in customers">
+                    <td width="50px"> {{customer.CustomerID}} </td>
+                    <td>{{customer.FirstName}}</td>
+                    <td>{{customer.City}}</td>
+                    <td>{{customer.ContactNo}}</td>
+                    <td>{{customer.EmailID}}</td>
+                    <td width="140px">
+                        <a class="a-inside edit" href="#!edit_customer/edit/{{customer.CustomerID}}">Edit</a>
+                       
+                        <a class="a-inside delete" href="#!delete_customer/delete/{{customer.CustomerID}}">Delete</a>
+                    </td>
+                </tr>          
+            </table>
+         </div>
+        </div>

@@ -1,0 +1,40 @@
+
+        <div class="page-data">
+		<!--
+         <div class="data-btn">
+             <button><a href="#!add_customer"> Add </a></button>
+         </div>
+		 -->
+         <div class="data-table">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">Product Id</th>
+                    <th>Product Name</th>
+                    <th>Category Name</th>
+                    <th>Subcatogory Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Commission Rate</th>
+                    <th>Outof Stock Date</th>
+					
+                </tr>
+                <tr ng-repeat="product in products">
+                    <td width="50px"> {{product.product_id}} </td>
+                    <td>{{product.product_name}}</td>
+                    <td>{{product.category_name}}</td>
+                    <td>{{product.subcategory_name}}</td>
+                    <td>{{product.actual_price}}</td>
+                    <td>{{product.product_avail_qty}}</td>
+                    <td>{{product.commission_rate}}</td>
+                    <td>{{product.outofstock_date}}</td>
+					<!--
+                    <td width="140px">
+                        <a class="a-inside edit" href="#!edit_customer/edit/{{product.CustomerID}}">Edit</a>
+                       
+                        <a class="a-inside delete" href="#!delete_customer/delete/{{product.CustomerID}}">Delete</a>
+                    </td>
+					-->
+                </tr>          
+            </table>
+         </div>
+        </div>
